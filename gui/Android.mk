@@ -121,6 +121,9 @@ ifeq ($(AB_OTA_UPDATER),true)
 endif
 ifeq ($(TW_SCREEN_BLANK_ON_BOOT), true)
     LOCAL_CFLAGS += -DTW_SCREEN_BLANK_ON_BOOT
+endif    
+ifeq ($(TW_EXCLUDE_TWRPAPP),true)
+    LOCAL_CFLAGS += -DTW_EXCLUDE_TWRPAPP
 endif
 
 LOCAL_C_INCLUDES += \

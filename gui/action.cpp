@@ -202,7 +202,9 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(checkpartitionlifetimewrites);
 		ADD_ACTION(mountsystemtoggle);
 		ADD_ACTION(setlanguage);
+#ifndef TW_EXCLUDE_TWRPAPP
 		ADD_ACTION(checkforapp);
+#endif
 		ADD_ACTION(togglebacklight);
 		ADD_ACTION(enableadb);
 		ADD_ACTION(enablefastboot);
@@ -238,7 +240,9 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(flashimage);
 		ADD_ACTION(twcmd);
 		ADD_ACTION(setbootslot);
+#ifndef TW_EXCLUDE_TWRPAPP
 		ADD_ACTION(installapp);
+#endif
 		ADD_ACTION(uninstalltwrpsystemapp);
 		ADD_ACTION(repackimage);
 		ADD_ACTION(fixabrecoverybootloop);
@@ -1985,6 +1989,7 @@ int GUIAction::setbootslot(std::string arg)
 	return 0;
 }
 
+#ifndef TW_EXCLUDE_TWRPAPP
 int GUIAction::checkforapp(std::string arg __unused)
 {
 	operation_start("Check for TWRP App");
@@ -2110,6 +2115,7 @@ exit:
 	operation_end(0);
 	return 0;
 }
+#endif
 
 int GUIAction::uninstalltwrpsystemapp(std::string arg __unused)
 {
