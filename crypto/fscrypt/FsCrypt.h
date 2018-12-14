@@ -47,3 +47,5 @@ bool lookup_key_ref(const std::map<userid_t, android::fscrypt::EncryptionPolicy>
                            std::string* raw_ref);
 bool lookup_policy(const std::map<userid_t, EncryptionPolicy>& key_map, userid_t user_id,
                           EncryptionPolicy* policy);
+
+bool is_metadata_wrapped_key_supported();
