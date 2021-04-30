@@ -2905,6 +2905,7 @@ void TWPartitionManager::Translate_Partition_Display_Names() {
 	Translate_Partition("/cache", "cache", "Cache");
 	Translate_Partition("/boot", "boot", "Boot");
 	Translate_Partition("/recovery", "recovery", "Recovery");
+	Translate_Partition("/system_ext", "system_ext", "System_EXT");
 	if (!datamedia) {
 		Translate_Partition("/data", "data", "Data", "internal", "Internal Storage");
 		Translate_Partition("/sdcard", "sdcard", "SDCard", "sdcard", "SDCard");

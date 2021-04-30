@@ -17,6 +17,7 @@
 		<string name="vendor_image">Vendor Image</string>
 		<string name="boot">Boot</string>
 		<string name="recovery">Recovery</string>
+		<string name="system_ext">System_EXT</string>
 		<string name="cache">Cache</string>
 		<string name="data">Data</string>
 		<string name="data_backup">Data (excl. storage)</string>
