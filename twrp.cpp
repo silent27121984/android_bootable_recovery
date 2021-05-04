@@ -357,9 +357,9 @@ int main(int argc, char **argv) {
 
 	PageManager::LoadLanguage(DataManager::GetStrValue("tw_language"));
 	GUIConsole::Translate_Now();
-
+#ifndef TW_EXCLUDE_TWRPAPP
 	TWFunc::checkforapp(); //Checking compatibility for TWRP app
-
+#endif
 	// Launch the main GUI
 	gui_start();
 	delete adb_bu_fifo;
