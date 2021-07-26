@@ -278,7 +278,7 @@ update_binary_command(const char* path, int retry_count,
 bool verify_package_compatibility(ZipArchiveHandle zw) {
   printf("Verifying package compatibility...\n");
 
-  static constexpr const char* COMPATIBILITY_ZIP_ENTRY = "compatibility.zip";
+  static constexpr const char* COMPATIBILITY_ZIP_ENTRY = "treble.zip";
   ZipString compatibility_entry_name(COMPATIBILITY_ZIP_ENTRY);
   ZipEntry compatibility_entry;
   if (FindEntry(zw, compatibility_entry_name, &compatibility_entry) != 0) {

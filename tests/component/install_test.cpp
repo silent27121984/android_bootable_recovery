@@ -63,7 +63,7 @@ TEST(InstallTest, verify_package_compatibility_no_entry) {
 
 TEST(InstallTest, verify_package_compatibility_invalid_entry) {
   TemporaryFile temp_file;
-  BuildZipArchive({ { "compatibility.zip", "" } }, temp_file.release(), kCompressStored);
+  BuildZipArchive({ { "treble.zip", "" } }, temp_file.release(), kCompressStored);
 
   // Empty compatibility zip entry.
   ZipArchiveHandle zip;
@@ -143,7 +143,7 @@ TEST(InstallTest, verify_package_compatibility_with_libvintf_malformed_xml) {
   std::string compatibility_zip_content;
   ASSERT_TRUE(
       android::base::ReadFileToString(compatibility_zip_file.path, &compatibility_zip_content));
-  BuildZipArchive({ { "compatibility.zip", compatibility_zip_content } }, temp_file.release(),
+  BuildZipArchive({ { "treble.zip", compatibility_zip_content } }, temp_file.release(),
                   kCompressStored);
 
   ZipArchiveHandle zip;
@@ -176,7 +176,7 @@ TEST(InstallTest, verify_package_compatibility_with_libvintf_system_manifest_xml
   std::string compatibility_zip_content;
   ASSERT_TRUE(
       android::base::ReadFileToString(compatibility_zip_file.path, &compatibility_zip_content));
-  BuildZipArchive({ { "compatibility.zip", compatibility_zip_content } }, temp_file.release(),
+  BuildZipArchive({ { "treble.zip", compatibility_zip_content } }, temp_file.release(),
                   kCompressStored);
 
   ZipArchiveHandle zip;
